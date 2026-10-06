@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="SAII GAMING HUB — Play. Compete. Level Up."
+    >
+
+    <meta name="theme-color" content="#070812">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>SAII GAMING HUB</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         APP ROOT
+         ========================================================= -->
+
+    <div id="app">
+
+        <!-- =====================================================
+             MOBILE TOP BAR
+             ===================================================== -->
+
+        <header class="mobile-topbar">
+
+            <button
+                class="icon-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation"
+            >
+                <span>☰</span>
+            </button>
+
+            <a href="#home" class="brand brand-mobile">
+                <span class="brand-mark">S</span>
+
+                <span class="brand-text">
+                    SAII
+                    <strong>GAMING HUB</strong>
+                </span>
+            </a>
+
+            <button
+                class="icon-button"
+                id="mobileProfileButton"
+                type="button"
+                aria-label="Open profile"
+                data-route="profile"
+            >
+                <span class="avatar-small" id="mobileAvatar">S</span>
+            </button>
+
+        </header>
+
+
+        <!-- =====================================================
+             DESKTOP SIDEBAR
+             ===================================================== -->
+
+        <aside
+            class="sidebar"
+            id="sidebar"
+            aria-label="Main navigation"
+        >
+
+            <div class="sidebar-top">
+
+                <a href="#home" class="brand">
+
+                    <span class="brand-mark">
+                        S
+                    </span>
+
+                    <span class="brand-text">
+                        SAII
+                        <strong>GAMING HUB</strong>
+                    </span>
+
+                </a>
+
+                <button
+                    class="sidebar-collapse"
+                    id="sidebarCollapse"
+                    type="button"
+                    aria-label="Collapse navigation"
+                >
+                    ‹
+                </button>
+
+            </div>
+
+
+            <!-- PLAYER MINI CARD -->
+
+            <div class="player-mini-card">
+
+                <div class="player-avatar" id="sidebarAvatar">
+                    S
+                </div>
+
+                <div class="player-mini-info">
+
+                    <span class="player-label">
+                        PLAYER
+                    </span>
+
+                    <strong id="sidebarPlayerName">
+                        Saii
+                    </strong>
+
+                    <span class="player-level">
+                        LVL <b id="sidebarPlayerLevel">1</b>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAIN NAVIGATION -->
+
+            <nav class="main-navigation">
+
+                <p class="navigation-title">
+                    MAIN MENU
+                </p>
+
+                <a
+                    href="#home"
+                    class="nav-item active"
+                    data-route="home"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span class="nav-label">Home</span>
+                </a>
+
+                <a
+                    href="#games"
+                    class="nav-item"
+                    data-route="games"
+                >
+                    <span class="nav-icon">🎮</span>
+                    <span class="nav-label">Games</span>
+                </a>
+
+                <a
+                    href="#categories"
+                    class="nav-item"
+                    data-route="categories"
+                >
+                    <span class="nav-icon">◈</span>
+                    <span class="nav-label">Categories</span>
+                </a>
+
+                <a
+                    href="#favorites"
+                    class="nav-item"
+                    data-route="favorites"
+                >
+                    <span class="nav-icon">♡</span>
+                    <span class="nav-label">Favorites</span>
+                    <span class="nav-badge" id="favoritesBadge">0</span>
+                </a>
+
+                <p class="navigation-title navigation-title-spaced">
+                    PLAYER
+                </p>
+
+                <a
+                    href="#achievements"
+                    class="nav-item"
+                    data-route="achievements"
+                >
+                    <span class="nav-icon">◆</span>
+                    <span class="nav-label">Achievements</span>
+                </a>
+
+                <a
+                    href="#leaderboard"
+                    class="nav-item"
+                    data-route="leaderboard"
+                >
+                    <span class="nav-icon">♛</span>
+                    <span class="nav-label">Leaderboard</span>
+                </a>
+
+                <a
+                    href="#profile"
+                    class="nav-item"
+                    data-route="profile"
+                >
+                    <span class="nav-icon">◉</span>
+                    <span class="nav-label">Profile</span>
+                </a>
+
+                <a
+                    href="#settings"
+                    class="nav-item"
+                    data-route="settings"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span class="nav-label">Settings</span>
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-version">
+                    <span>SAII HUB</span>
+                    <span>v1.0.0</span>
+                </div>
+
+                <div class="sidebar-status">
+                    <span class="status-dot"></span>
+                    <span>System Online</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MOBILE NAVIGATION
+             ===================================================== -->
+
+        <nav
+            class="mobile-bottom-nav"
+            id="mobileBottomNav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="#home" class="mobile-nav-item active" data-route="home">
+                <span>⌂</span>
+                <small>Home</small>
+            </a>
+
+            <a href="#games" class="mobile-nav-item" data-route="games">
+                <span>🎮</span>
+                <small>Games</small>
+            </a>
+
+            <a href="#favorites" class="mobile-nav-item" data-route="favorites">
+                <span>♡</span>
+                <small>Favorites</small>
+            </a>
+
+            <a href="#achievements" class="mobile-nav-item" data-route="achievements">
+                <span>◆</span>
+                <small>Rewards</small>
+            </a>
+
+            <a href="#profile" class="mobile-nav-item" data-route="profile">
+                <span>◉</span>
+                <small>Profile</small>
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+             ===================================================== -->
+
+        <main class="main-content" id="mainContent">
+
+            <!-- =================================================
+                 HOME PAGE
+                 ================================================= -->
+
+            <section
+                class="page active"
+                id="page-home"
+                data-page="home"
+            >
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="eyebrow">
+                            WELCOME BACK, PLAYER
+                        </span>
+
+                        <h1>
+                            Ready to
+                            <span class="gradient-text">
+                                play?
+                            </span>
+                        </h1>
+
+                        <p>
+                            Play. Compete. Level Up.
+                        </p>
+                    </div>
+
+                    <div class="header-actions">
+
+                        <button
+                            class="header-action"
+                            type="button"
+                            data-route="settings"
+                            aria-label="Settings"
+                        >
+                            ⚙
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO -->
+
+                <section class="hero-panel">
+
+                    <div class="hero-content">
+
+                        <span class="hero-kicker">
+                            SAII GAMING HUB
+                        </span>
+
+                        <h2>
+                            YOUR
+                            <span>ULTIMATE</span>
+                            PLAYGROUND
+                        </h2>
+
+                        <p>
+                            Discover fast arcade games, challenges,
+                            puzzles and competitive mini-games —
+                            all in one place.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <button
+                                class="primary-button"
+                                type="button"
+                                data-route="games"
+                            >
+                                <span>▶</span>
+                                Play Now
+                            </button>
+
+                            <button
+                                class="secondary-button"
+                                type="button"
+                                data-route="games"
+                            >
+                                Browse Games
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-visual">
+
+                        <div class="hero-grid"></div>
+
+                        <div class="hero-orbit orbit-one"></div>
+                        <div class="hero-orbit orbit-two"></div>
+
+                        <div class="hero-controller">
+                            <span class="controller-light"></span>
+                            <span class="controller-button button-a">A</span>
+                            <span class="controller-button button-b">B</span>
+                        </div>
+
+                        <div class="hero-floating-card card-one">
+                            <span>XP</span>
+                            <strong id="heroXP">0</strong>
+                        </div>
+
+                        <div class="hero-floating-card card-two">
+                            <span>LEVEL</span>
+                            <strong id="heroLevel">1</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- QUICK STATS -->
+
+                <section class="stats-grid">
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon">
+                            🎮
+                        </div>
+
+                        <div>
+                            <span>Games Played</span>
+                            <strong id="homeGamesPlayed">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+                            <span>Total XP</span>
+                            <strong id="homeTotalXP">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon">
+                            🏆
+                        </div>
+
+                        <div>
+                            <span>Achievements</span>
+                            <strong id="homeAchievements">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-icon">
+                            ♡
+                        </div>
+
+                        <div>
+                            <span>Favorites</span>
+                            <strong id="homeFavorites">0</strong>
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- FEATURED GAMES -->
+
+                <section class="content-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-kicker">
+                                PLAY SOMETHING
+                            </span>
+
+                            <h2>
+                                Featured Games
+                            </h2>
+                        </div>
+
+                        <button
+                            class="text-button"
+                            type="button"
+                            data-route="games"
+                        >
+                            View All →
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="game-card-grid featured-grid"
+                        id="featuredGames"
+                    >
+                        <!-- JavaScript inserts games -->
+                    </div>
+
+                </section>
+
+
+                <!-- RECENTLY PLAYED -->
+
+                <section class="content-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-kicker">
+                                CONTINUE PLAYING
+                            </span>
+
+                            <h2>
+                                Recently Played
+                            </h2>
+
+                        </div>
+
+                        <button
+                            class="text-button"
+                            type="button"
+                            data-route="games"
+                        >
+                            All Games →
+                        </button>
+
+                    </div>
+
+                    <div
+                        class="horizontal-game-list"
+                        id="recentGames"
+                    >
+                        <!-- JavaScript inserts games -->
+                    </div>
+
+                </section>
+
+
+                <!-- CATEGORIES -->
+
+                <section class="content-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-kicker">
+                                EXPLORE
+                            </span>
+
+                            <h2>
+                                Categories
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-grid">
+
+                        <button
+                            class="category-card"
+                            type="button"
+                            data-category="Arcade"
+                        >
+                            <span class="category-symbol">⚡</span>
+                            <strong>Arcade</strong>
+                            <small>Fast & intense</small>
+                        </button>
+
+                        <button
+                            class="category-card"
+                            type="button"
+                            data-category="Puzzle"
+                        >
+                            <span class="category-symbol">◆</span>
+                            <strong>Puzzle</strong>
+                            <small>Think smarter</small>
+                        </button>
+
+                        <button
+                            class="category-card"
+                            type="button"
+                            data-category="Racing"
+                        >
+                            <span class="category-symbol">🏁</span>
+                            <strong>Racing</strong>
+                            <small>Race to win</small>
+                        </button>
+
+                        <button
+                            class="category-card"
+                            type="button"
+                            data-category="Reflex"
+                        >
+                            <span class="category-symbol">◉</span>
+                            <strong>Reflex</strong>
+                            <small>Test your speed</small>
+                        </button>
+
+                        <button
+                            class="category-card"
+                            type="button"
+                            data-category="Strategy"
+                        >
+                            <span class="category-symbol">♟</span>
+                            <strong>Strategy</strong>
+                            <small>Outsmart rivals</small>
+                        </button>
+
+                        <button
+                            class="category-card"
+                            type="button"
+                            data-category="Classic"
+                        >
+                            <span class="category-symbol">✦</span>
+                            <strong>Classic</strong>
+                            <small>Timeless games</small>
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <!-- =================================================
+                 GAMES PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-games"
+                data-page="games"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            GAME LIBRARY
+                        </span>
+
+                        <h1>
+                            Choose Your
+                            <span class="gradient-text">
+                                Game
+                            </span>
+                        </h1>
+
+                        <p>
+                            Explore every game available in SAII GAMING HUB.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GAME SEARCH -->
+
+                <div class="game-library-toolbar">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="gameSearch"
+                            placeholder="Search games, categories or tags..."
+                            autocomplete="off"
+                            aria-label="Search games"
+                        >
+
+                        <kbd>CTRL K</kbd>
+
+                    </div>
+
+
+                    <div class="filter-controls">
+
+                        <select
+                            id="gameCategoryFilter"
+                            aria-label="Filter games by category"
+                        >
+                            <option value="all">All Categories</option>
+                            <option value="Arcade">Arcade</option>
+                            <option value="Action">Action</option>
+                            <option value="Puzzle">Puzzle</option>
+                            <option value="Racing">Racing</option>
+                            <option value="Reflex">Reflex</option>
+                            <option value="Strategy">Strategy</option>
+                            <option value="Memory">Memory</option>
+                            <option value="Casual">Casual</option>
+                            <option value="Classic">Classic</option>
+                            <option value="Endless">Endless</option>
+                            <option value="Sports">Sports</option>
+                        </select>
+
+
+                        <select
+                            id="gameSort"
+                            aria-label="Sort games"
+                        >
+                            <option value="popular">Popular</option>
+                            <option value="newest">Newest</option>
+                            <option value="az">A-Z</option>
+                            <option value="score">Highest Score</option>
+                            <option value="recent">Recently Played</option>
+                            <option value="favorites">Favorites</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY CHIPS -->
+
+                <div
+                    class="category-chips"
+                    id="gameCategoryChips"
+                >
+
+                    <button
+                        class="category-chip active"
+                        type="button"
+                        data-category="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="category-chip"
+                        type="button"
+                        data-category="Arcade"
+                    >
+                        Arcade
+                    </button>
+
+                    <button
+                        class="category-chip"
+                        type="button"
+                        data-category="Puzzle"
+                    >
+                        Puzzle
+                    </button>
+
+                    <button
+                        class="category-chip"
+                        type="button"
+                        data-category="Racing"
+                    >
+                        Racing
+                    </button>
+
+                    <button
+                        class="category-chip"
+                        type="button"
+                        data-category="Reflex"
+                    >
+                        Reflex
+                    </button>
+
+                    <button
+                        class="category-chip"
+                        type="button"
+                        data-category="Strategy"
+                    >
+                        Strategy
+                    </button>
+
+                    <button
+                        class="category-chip"
+                        type="button"
+                        data-category="Classic"
+                    >
+                        Classic
+                    </button>
+
+                </div>
+
+
+                <!-- GAME COUNT -->
+
+                <div class="library-result-bar">
+
+                    <span id="gameResultCount">
+                        0 games
+                    </span>
+
+                    <button
+                        class="view-toggle active"
+                        type="button"
+                        aria-label="Grid view"
+                    >
+                        ▦
+                    </button>
+
+                    <button
+                        class="view-toggle"
+                        type="button"
+                        aria-label="List view"
+                    >
+                        ☷
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="game-card-grid library-grid"
+                    id="gameLibrary"
+                >
+                    <!-- JavaScript inserts games -->
+                </div>
+
+
+                <div
+                    class="empty-state hidden"
+                    id="gameEmptyState"
+                >
+
+                    <div class="empty-icon">
+                        ◌
+                    </div>
+
+                    <h2>
+                        No Games Found
+                    </h2>
+
+                    <p>
+                        Try another search or category.
+                    </p>
+
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        id="clearGameFilters"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CATEGORIES PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-categories"
+                data-page="categories"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            DISCOVER
+                        </span>
+
+                        <h1>
+                            Game
+                            <span class="gradient-text">
+                                Categories
+                            </span>
+                        </h1>
+
+                        <p>
+                            Find the type of game you are in the mood for.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="category-page-grid"
+                    id="categoryPageGrid"
+                >
+                    <!-- JavaScript populates -->
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FAVORITES PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-favorites"
+                data-page="favorites"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            YOUR COLLECTION
+                        </span>
+
+                        <h1>
+                            Favorite
+                            <span class="gradient-text">
+                                Games
+                            </span>
+                        </h1>
+
+                        <p>
+                            Your personal collection of games.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="game-card-grid library-grid"
+                    id="favoriteGames"
+                >
+                    <!-- JavaScript populates -->
+                </div>
+
+
+                <div
+                    class="empty-state hidden"
+                    id="favoriteEmptyState"
+                >
+
+                    <div class="empty-icon">
+                        ♡
+                    </div>
+
+                    <h2>
+                        No Favorites Yet
+                    </h2>
+
+                    <p>
+                        Tap the heart on any game to add it here.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        type="button"
+                        data-route="games"
+                    >
+                        Browse Games
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ACHIEVEMENTS PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-achievements"
+                data-page="achievements"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            REWARDS
+                        </span>
+
+                        <h1>
+                            Achievements
+                        </h1>
+
+                        <p>
+                            Complete challenges and earn XP.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <section class="achievement-summary">
+
+                    <div class="achievement-progress">
+
+                        <div class="achievement-progress-top">
+
+                            <div>
+                                <span>
+                                    COLLECTION PROGRESS
+                                </span>
+
+                                <strong id="achievementProgressText">
+                                    0 / 0
+                                </strong>
+                            </div>
+
+                            <div class="achievement-trophy">
+                                ◆
+                            </div>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-fill"
+                                id="achievementProgressBar"
+                                style="width: 0%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div
+                    class="achievement-grid"
+                    id="achievementGrid"
+                >
+                    <!-- JavaScript populates -->
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 LEADERBOARD PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-leaderboard"
+                data-page="leaderboard"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            COMPETE
+                        </span>
+
+                        <h1>
+                            Leaderboard
+                        </h1>
+
+                        <p>
+                            Track your personal records and local rankings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="leaderboard-notice">
+
+                    <span>ⓘ</span>
+
+                    <p>
+                        These rankings are stored locally on this device.
+                        They are not a real global leaderboard.
+                    </p>
+
+                </div>
+
+
+                <div class="leaderboard-layout">
+
+                    <section class="leaderboard-card">
+
+                        <div class="leaderboard-header">
+
+                            <div>
+                                <span class="section-kicker">
+                                    LOCAL RANKINGS
+                                </span>
+
+                                <h2>
+                                    Top Scores
+                                </h2>
+                            </div>
+
+                            <select
+                                id="leaderboardGameSelect"
+                                aria-label="Choose leaderboard game"
+                            >
+                                <option value="all">
+                                    All Games
+                                </option>
+                            </select>
+
+                        </div>
+
+
+                        <div
+                            class="leaderboard-list"
+                            id="leaderboardList"
+                        >
+                            <!-- JavaScript populates -->
+                        </div>
+
+                    </section>
+
+
+                    <section class="personal-record-card">
+
+                        <span class="section-kicker">
+                            YOUR RECORDS
+                        </span>
+
+                        <h2>
+                            Personal Bests
+                        </h2>
+
+                        <div
+                            id="personalRecords"
+                            class="personal-record-list"
+                        >
+                            <!-- JavaScript populates -->
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROFILE PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-profile"
+                data-page="profile"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            PLAYER PROFILE
+                        </span>
+
+                        <h1>
+                            Your
+                            <span class="gradient-text">
+                                Profile
+                            </span>
+                        </h1>
+
+                        <p>
+                            Your progress, records and gaming identity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <section class="profile-hero">
+
+                    <div class="profile-avatar-large" id="profileAvatar">
+                        S
+                    </div>
+
+                    <div class="profile-main-info">
+
+                        <span class="profile-rank">
+                            PLAYER
+                        </span>
+
+                        <h2 id="profileName">
+                            Saii
+                        </h2>
+
+                        <p>
+                            Level
+                            <strong id="profileLevel">1</strong>
+                        </p>
+
+                        <div class="xp-progress">
+
+                            <div class="xp-progress-label">
+
+                                <span>
+                                    XP
+                                </span>
+
+                                <strong>
+                                    <span id="profileXP">0</span>
+                                    /
+                                    <span id="profileNextXP">100</span>
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    class="progress-fill"
+                                    id="profileXPBar"
+                                    style="width: 0%"
+                                ></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="secondary-button profile-edit-button"
+                        type="button"
+                        data-action="edit-profile"
+                    >
+                        Edit Profile
+                    </button>
+
+                </section>
+
+
+                <section class="profile-stats-grid">
+
+                    <article class="profile-stat">
+                        <span>Games Played</span>
+                        <strong id="profileGamesPlayed">0</strong>
+                    </article>
+
+                    <article class="profile-stat">
+                        <span>Total XP</span>
+                        <strong id="profileTotalXP">0</strong>
+                    </article>
+
+                    <article class="profile-stat">
+                        <span>Best Score</span>
+                        <strong id="profileBestScore">0</strong>
+                    </article>
+
+                    <article class="profile-stat">
+                        <span>Achievements</span>
+                        <strong id="profileAchievements">0</strong>
+                    </article>
+
+                    <article class="profile-stat">
+                        <span>Favorites</span>
+                        <strong id="profileFavoriteCount">0</strong>
+                    </article>
+
+                    <article class="profile-stat">
+                        <span>Categories</span>
+                        <strong id="profileCategories">0</strong>
+                    </article>
+
+                </section>
+
+
+                <section class="content-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="section-kicker">
+                                ACTIVITY
+                            </span>
+
+                            <h2>
+                                Recent Games
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="activity-list"
+                        id="profileRecentGames"
+                    >
+                        <!-- JavaScript populates -->
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS PAGE
+                 ================================================= -->
+
+            <section
+                class="page"
+                id="page-settings"
+                data-page="settings"
+            >
+
+                <div class="page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            CUSTOMIZE
+                        </span>
+
+                        <h1>
+                            Settings
+                        </h1>
+
+                        <p>
+                            Configure your SAII GAMING HUB experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-layout">
+
+                    <!-- GAMEPLAY -->
+
+                    <section class="settings-card">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <span class="settings-icon">◈</span>
+                            </div>
+
+                            <div>
+                                <h2>Gameplay</h2>
+                                <p>Customize your gaming experience.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-list">
+
+                            <label class="setting-row">
+
+                                <span>
+                                    <strong>Sound Effects</strong>
+                                    <small>Play interface and game sounds.</small>
+                                </span>
+
+                                <input
+                                    type="checkbox"
+                                    id="settingSound"
+                                    checked
+                                >
+
+                                <span class="toggle"></span>
+
+                            </label>
+
+
+                            <label class="setting-row">
+
+                                <span>
+                                    <strong>Music</strong>
+                                    <small>Background music where supported.</small>
+                                </span>
+
+                                <input
+                                    type="checkbox"
+                                    id="settingMusic"
+                                >
+
+                                <span class="toggle"></span>
+
+                            </label>
+
+
+                            <label class="setting-row">
+
+                                <span>
+                                    <strong>Animations</strong>
+                                    <small>Interface transition effects.</small>
+                                </span>
+
+                                <input
+                                    type="checkbox"
+                                    id="settingAnimations"
+                                    checked
+                                >
+
+                                <span class="toggle"></span>
+
+                            </label>
+
+
+                            <label class="setting-row">
+
+                                <span>
+                                    <strong>Reduced Motion</strong>
+                                    <small>Reduce visual movement and effects.</small>
+                                </span>
+
+                                <input
+                                    type="checkbox"
+                                    id="settingReducedMotion"
+                                >
+
+                                <span class="toggle"></span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PROFILE -->
+
+                    <section class="settings-card">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <span class="settings-icon">◉</span>
+                            </div>
+
+                            <div>
+                                <h2>Player</h2>
+                                <p>Manage your gaming identity.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-form">
+
+                            <label for="playerNameInput">
+                                Gamer Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="playerNameInput"
+                                maxlength="20"
+                                autocomplete="off"
+                                placeholder="Enter gamer name"
+                            >
+
+                            <button
+                                class="primary-button"
+                                type="button"
+                                id="savePlayerName"
+                            >
+                                Save Name
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- DISPLAY -->
+
+                    <section class="settings-card">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <span class="settings-icon">▣</span>
+                            </div>
+
+                            <div>
+                                <h2>Display</h2>
+                                <p>Control how the hub behaves.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-list">
+
+                            <label class="setting-row">
+
+                                <span>
+                                    <strong>Fullscreen</strong>
+                                    <small>Use fullscreen when supported.</small>
+                                </span>
+
+                                <button
+                                    class="small-action-button"
+                                    type="button"
+                                    id="settingsFullscreen"
+                                >
+                                    Enter
+                                </button>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- DATA -->
+
+                    <section class="settings-card danger-card">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <span class="settings-icon">⚠</span>
+                            </div>
+
+                            <div>
+                                <h2>Data Management</h2>
+                                <p>Manage locally stored player data.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="danger-actions">
+
+                            <button
+                                class="secondary-button"
+                                type="button"
+                                data-action="clear-history"
+                            >
+                                Clear History
+                            </button>
+
+                            <button
+                                class="secondary-button"
+                                type="button"
+                                data-action="clear-favorites"
+                            >
+                                Clear Favorites
+                            </button>
+
+                            <button
+                                class="danger-button"
+                                type="button"
+                                data-action="reset-progress"
+                            >
+                                Reset Progress
+                            </button>
+
+                            <button
+                                class="danger-button"
+                                type="button"
+                                data-action="reset-all"
+                            >
+                                Reset All Data
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ABOUT -->
+
+                    <section class="settings-card">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <span class="settings-icon">ⓘ</span>
+                            </div>
+
+                            <div>
+                                <h2>About</h2>
+                                <p>Information about this project.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-info">
+
+                            <div>
+                                <span>Project</span>
+                                <strong>SAII GAMING HUB</strong>
+                            </div>
+
+                            <div>
+                                <span>Creator</span>
+                                <strong>Saii</strong>
+                            </div>
+
+                            <div>
+                                <span>GitHub</span>
+                                <strong>saii-1228</strong>
+                            </div>
+
+                            <div>
+                                <span>Version</span>
+                                <strong>1.0.0</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         GAME LAUNCH MODAL
+         ========================================================= -->
+
+    <div
+        class="modal-overlay hidden"
+        id="gameDetailModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="gameDetailTitle"
+    >
+
+        <div class="game-detail-modal">
+
+            <button
+                class="modal-close"
+                type="button"
+                data-close-modal="gameDetailModal"
+                aria-label="Close game details"
+            >
+                ×
+            </button>
+
+
+            <div
+                class="game-detail-art"
+                id="gameDetailArt"
+            >
+                <span id="gameDetailIcon">🎮</span>
+            </div>
+
+
+            <div class="game-detail-content">
+
+                <div class="game-detail-tags">
+
+                    <span id="gameDetailCategory">
+                        Arcade
+                    </span>
+
+                    <span id="gameDetailDifficulty">
+                        Medium
+                    </span>
+
+                </div>
+
+                <h2 id="gameDetailTitle">
+                    Game Title
+                </h2>
+
+                <p id="gameDetailDescription">
+                    Game description.
+                </p>
+
+
+                <div class="game-detail-stats">
+
+                    <div>
+                        <span>BEST SCORE</span>
+                        <strong id="gameDetailBestScore">0</strong>
+                    </div>
+
+                    <div>
+                        <span>PLAYS</span>
+                        <strong id="gameDetailPlays">0</strong>
+                    </div>
+
+                    <div>
+                        <span>TIME</span>
+                        <strong id="gameDetailTime">2–5 min</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="game-controls-info">
+
+                    <h3>
+                        How to Play
+                    </h3>
+
+                    <p id="gameDetailControls">
+                        Use the controls shown here to play.
+                    </p>
+
+                </div>
+
+
+                <div class="game-detail-actions">
+
+                    <button
+                        class="primary-button large-button"
+                        type="button"
+                        id="launchGameButton"
+                    >
+                        ▶ Play Game
+                    </button>
+
+                    <button
+                        class="secondary-button favorite-detail-button"
+                        type="button"
+                        id="detailFavoriteButton"
+                    >
+                        ♡ Favorite
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         GAME SCREEN
+         ========================================================= -->
+
+    <div
+        class="game-screen hidden"
+        id="gameScreen"
+    >
+
+        <header class="game-screen-header">
+
+            <div class="game-screen-title">
+
+                <button
+                    class="game-exit-button"
+                    type="button"
+                    id="gameExitButton"
+                    aria-label="Exit game"
+                >
+                    ←
+                </button>
+
+                <div>
+
+                    <span>
+                        PLAYING
+                    </span>
+
+                    <h1 id="activeGameTitle">
+                        Game
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="game-header-actions">
+
+                <button
+                    class="game-header-button"
+                    type="button"
+                    id="gameSoundButton"
+                    aria-label="Toggle game sound"
+                >
+                    🔊
+                </button>
+
+                <button
+                    class="game-header-button"
+                    type="button"
+                    id="gameFullscreenButton"
+                    aria-label="Fullscreen"
+                >
+                    ⛶
+                </button>
+
+                <button
+                    class="game-header-button"
+                    type="button"
+                    id="gamePauseButton"
+                    aria-label="Pause game"
+                >
+                    ❚❚
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div class="game-hud">
+
+            <div class="game-hud-stat">
+
+                <span>
+                    SCORE
+                </span>
+
+                <strong id="activeGameScore">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="game-hud-stat">
+
+                <span>
+                    BEST
+                </span>
+
+                <strong id="activeGameBest">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="game-hud-stat">
+
+                <span>
+                    LEVEL
+                </span>
+
+                <strong id="activeGameLevel">
+                    1
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <main class="game-stage">
+
+            <div
+                class="game-canvas-wrapper"
+                id="gameCanvasWrapper"
+            >
+
+                <!-- Individual games mount their canvas/UI here -->
+
+            </div>
+
+
+            <div
+                class="game-loading-state"
+                id="gameLoadingState"
+            >
+
+                <div class="loading-spinner"></div>
+
+                <p>
+                    Loading game...
+                </p>
+
+            </div>
+
+
+            <div
+                class="game-error-state hidden"
+                id="gameErrorState"
+            >
+
+                <div class="game-error-icon">
+                    !
+                </div>
+
+                <h2>
+                    Game Error
+                </h2>
+
+                <p id="gameErrorMessage">
+                    Something went wrong while loading this game.
+                </p>
+
+                <button
+                    class="secondary-button"
+                    type="button"
+                    id="gameErrorExit"
+                >
+                    Return to Games
+                </button>
+
+            </div>
+
+
+            <div
+                class="game-overlay hidden"
+                id="gamePauseOverlay"
+            >
+
+                <div class="game-overlay-card">
+
+                    <span class="overlay-icon">
+                        ❚❚
+                    </span>
+
+                    <h2>
+                        Game Paused
+                    </h2>
+
+                    <p>
+                        Take a break. Your progress is safe.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        type="button"
+                        id="gameResumeButton"
+                    >
+                        Resume
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="game-overlay hidden"
+                id="gameOverOverlay"
+            >
+
+                <div class="game-overlay-card">
+
+                    <span class="overlay-icon">
+                        ◆
+                    </span>
+
+                    <span class="overlay-kicker">
+                        GAME OVER
+                    </span>
+
+                    <h2 id="gameOverTitle">
+                        Nice Run!
+                    </h2>
+
+                    <div class="game-over-score">
+
+                        <span>
+                            SCORE
+                        </span>
+
+                        <strong id="gameOverScore">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <p id="gameOverMessage">
+                        Keep playing to beat your record.
+                    </p>
+
+                    <div class="game-over-actions">
+
+                        <button
+                            class="primary-button"
+                            type="button"
+                            id="gameReplayButton"
+                        >
+                            ↻ Play Again
+                        </button>
+
+                        <button
+                            class="secondary-button"
+                            type="button"
+                            id="gameOverExitButton"
+                        >
+                            Exit
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- MOBILE GAME CONTROLS -->
+
+        <div
+            class="mobile-game-controls hidden"
+            id="mobileGameControls"
+        >
+            <!-- Individual games insert controls -->
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PROFILE EDIT MODAL
+         ========================================================= -->
+
+    <div
+        class="modal-overlay hidden"
+        id="profileEditModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="profileEditTitle"
+    >
+
+        <div class="small-modal">
+
+            <button
+                class="modal-close"
+                type="button"
+                data-close-modal="profileEditModal"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <span class="section-kicker">
+                PROFILE
+            </span>
+
+            <h2 id="profileEditTitle">
+                Edit Gamer Name
+            </h2>
+
+            <label for="profileNameInput">
+                Gamer Name
+            </label>
+
+            <input
+                type="text"
+                id="profileNameInput"
+                maxlength="20"
+                autocomplete="off"
+            >
+
+            <div class="modal-actions">
+
+                <button
+                    class="secondary-button"
+                    type="button"
+                    data-close-modal="profileEditModal"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    id="profileSaveButton"
+                >
+                    Save
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         CONFIRMATION MODAL
+         ========================================================= -->
+
+    <div
+        class="modal-overlay hidden"
+        id="confirmModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="confirmTitle"
+    >
+
+        <div class="small-modal confirm-modal">
+
+            <div class="confirm-icon">
+                !
+            </div>
+
+            <h2 id="confirmTitle">
+                Are you sure?
+            </h2>
+
+            <p id="confirmMessage">
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    class="secondary-button"
+                    type="button"
+                    id="confirmCancel"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="danger-button"
+                    type="button"
+                    id="confirmProceed"
+                >
+                    Confirm
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         TOAST CONTAINER
+         ========================================================= -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+        aria-atomic="true"
+    ></div>
+
+
+    <!-- =========================================================
+         ACHIEVEMENT UNLOCK NOTIFICATION
+         ========================================================= -->
+
+    <div
+        class="achievement-toast hidden"
+        id="achievementToast"
+        role="status"
+    >
+
+        <div class="achievement-toast-icon">
+            ◆
+        </div>
+
+        <div>
+
+            <span>
+                ACHIEVEMENT UNLOCKED
+            </span>
+
+            <strong id="achievementToastTitle">
+                Achievement
+            </strong>
+
+            <small id="achievementToastXP">
+                +50 XP
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         CORE JAVASCRIPT
+         ========================================================= -->
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+                      </html>
